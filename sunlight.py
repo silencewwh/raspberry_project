@@ -32,9 +32,6 @@ def getIlluminance():
     #read_word_data
     res=((res>>8)&0xff)|(res<<8)&0xff00
     res=round(res/(2*1.2),2)
-    result=str(res)
+    result=float(res)
     return result
 
-if __name__ == '__main__':
-    while True:
-        print(getIlluminance())

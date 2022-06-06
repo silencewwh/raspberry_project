@@ -163,18 +163,3 @@ class BMP180(object):
         pressure = self.compensate_pressure(
             adc_P)          # pressure compensate
         return pressure
- 
- 
-if __name__ == '__main__':
- 
-    import time
- 
-    print("BMP280 Test Program ...\n")
- 
-    bmp280 = BMP180()
- 
-    while True:
-        time.sleep(1)
-        temperature, pressure = bmp280.get_temperature_and_pressure()
-        print(' Temperature = %.2f C Pressure = %.3f kPa' %
-              (temperature, pressure/1000))
